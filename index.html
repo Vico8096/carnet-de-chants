@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Carnet de chants</title>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg,#eef2ff 0%,#f8fafc 100%);
+  color: #111827;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+#search {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.toc,
+.song {
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 28px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(79,70,229,.08);
+}
+
+.toc a {
+  display: block;
+  padding: 10px 0;
+  color: #4f46e5;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.toc a:hover {
+  color: #7c3aed;
+}
+
+.song h2 {
+  margin-top: 0;
+  color: #312e81;
+}
+
+.lyrics {
+  white-space: pre-wrap;
+  font-size: 1.08rem;
+}
+
+.refrain {
+  font-weight: 700;
+  color: #be185d;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 24px;
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.floating-home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4f46e5;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 10px 25px rgba(79,70,229,.3);
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .song,
+  .toc {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .lyrics {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="sommaire">Carnet de chants</h1>
+
+<p class="subtitle">
+Chants classés par ordre alphabétique
+</p>
+
+<input id="search" placeholder="Rechercher un chant..." />
+
+<div class="toc">
+<h2>Sommaire</h2>
+
+<a href="#alleluia">Alléluia le Seigneur règne</a>
+<a href="#au-grand-large">Au grand large tu m’entraînes</a>
+<a href="#ave-maria">Ave Maria</a>
+<a href="#benis">Bénis le Seigneur, ô mon âme</a>
+<a href="#benissez">Bénissez Dieu</a>
+<a href="#celeste">Céleste Jérusalem</a>
+<a href="#cest-par-ta-grace">C’est par ta grâce</a>
+<a href="#couronnee">Couronnée d’étoiles</a>
+<a href="#donne-moi">Donne-moi seulement de t’aimer</a>
+<a href="#ecoute">Écoute, ton Dieu t’appelle</a>
+<a href="#en-toi">En toi, j’ai mis ma confiance</a>
+<a href="#en-toi-j">En toi, ma confiance</a>
+<a href="#esprit">Esprit de Dieu</a>
+<a href="#esprit-lumiere">Esprit de lumière, Esprit Créateur</a>
+<a href="#esprit-pentecote">Esprit de Pentecôte, Souffle de Dieu</a>
+<a href="#esprit-saint-viens">Esprit saint, ô viens</a>
+<a href="#faire-eglise">Faire Église tous ensemble</a>
+<a href="#goutez">Goûtez et voyez</a>
+<a href="#humblement">Humblement dans le silence</a>
+<a href="#ils-deviennent-chemin">Ils deviennent chemin</a>
+<a href="#je-veux">Je veux chanter ton amour, Seigneur</a>
+<a href="#je-vous-aime">Je vous aime, ô mon Dieu</a>
+<a href="#jesus-chemin">Jésus est le chemin</a>
+<a href="#la-maison">La maison du Père</a>
+<a href="#la-premiere">La première en chemin</a>
+<a href="#le-seigneur">Le Seigneur est ma lumière et mon salut</a>
+<a href="#marie">Marie, douce lumière</a>
+<a href="#o-jesus">Ô Jésus Miséricordieux</a>
+<a href="#pour-tes">Pour tes merveilles</a>
+<a href="#que-ma-bouche">Que ma bouche chante ta louange</a>
+<a href="#quils-sont-beaux">Qu’ils sont beaux</a>
+<a href="#recevez">Recevez le Christ</a>
+<a href="#regarde">Regarde l’étoile</a>
+<a href="#regardez-humilite">Regardez l’humilité de Dieu</a>
+<a href="#repands-ton-feu">Répands ton feu sur la terre</a>
+<a href="#souffle">Souffle imprévisible</a>
+<a href="#tu-as-porte">Tu as porté celui qui porte tout</a>
+<a href="#venez-voir">Venez voir</a>
+<a href="#viens-descends">Viens, Esprit Saint descends sur nous</a>
+<a href="#viens-embraser">Viens embraser nos cœurs</a>
+<a href="#viens-remplir">Viens remplir de ton feu</a>
+
+</div>
+
+<section class="song" id="alleluia">
+<h2>Alléluia le Seigneur règne</h2>
+<div class="lyrics">
+1. Rendons gloire à Dieu, soyons dans la joie, A Jésus gloire et puissance. 
+Dieu le Seigneur, maître de tout, Règne dans sa majesté. 
+<span class="refrain">
+Alléluia! Le Seigneur règne, 
+Alléluia! il est vainqueur. 
+Alléluia! Le Seigneur règne, 
+Chante Alléluia! Amen! 
+</span>
+2. Le temps est venu de célébrer dans la joie et l’allégresse. 
+Venez donc tous pour le banquet, pour les noces de l’Agneau. 
+
+3. Vous tous qui êtes appelés par le Seigneur, Roi de gloire. 
+Adorez Dieu dans l’unité, pour les siècles. Amen ! 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="au-grand-large">
+<h2>Au grand large tu m’entraînes</h2>
+<div class="lyrics">
+<span class="refrain">
+Au grand large tu m’entraînes
+Ta présence a dissipé ma nuit.
+Je te loue mon roc et ma force,
+Ô mon Dieu, le rempart de ma vie 
+</span>
+1. Toi mon rocher, ma forteresse,
+tu es celui en qui je m’appuie.
+Tu m’as sauvé des filets des ténèbres,
+et de la mort, tu m’as délivré !
+
+2. Quand j’ai crié, dans la détresse,
+du fond des mers je t’ai appelé,
+Tu m’as tiré des tréfonds de l’abîme,
+tu m’as saisi par ton bras puissant !
+
+3. Tu me revêts de ta lumière,
+par ton amour tu me fortifies.
+Seigneur je chante et je te loue sans cesse,
+et qu’en tout lieu, je publie ton nom !
+
+4. Pour toi mon Dieu, rien d’impossible,
+car tes chemins dépassent nos voies.
+Avec toi seul je franchis les murailles,
+toi mon espoir, j’ai confiance en toi !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="ave-maria">
+<h2>Ave Maria</h2>
+<div class="lyrics">
+Je te salue Marie comblée de grâce
+Le Seigneur est avec toi
+Tu es bénie Marie entre toutes les femmes
+Et Jésus, le fruit de tes entrailles est béni
+Sainte Marie, Mère de Dieu
+Oh prie pour nous, pauvres pécheurs
+Dès maintenant et jusqu'à l'heure de notre mort
+Amen
+<span class="refrain">
+Ave Maria, Ave Maria
+Ave Maria, Ave Maria
+Ave Maria, Ave Maria
+Ave Maria, Ave Maria
+</span>
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="benis">
+<h2>Bénis le Seigneur, ô mon âme</h2>
+<div class="lyrics">
+<span class="refrain">
+Bénis le Seigneur, ô mon âme,
+Du fond de mon être, son Saint Nom.
+Bénis le Seigneur, ô mon âme,
+Et n’oublie aucun de ses bienfaits.
+</span>
+1. Le Seigneur est tendresse et pitié,
+Lent à la colère et plein d’amour,
+Sa justice demeure à jamais.
+
+2. Il pardonne toutes tes fautes,
+De tes maladies il te guérit,
+À la fosse il rachète ta vie.
+
+3. Comme un père pour ses enfants,
+Tendre est le Seigneur pour qui le craint,
+De son cœur jaillit l’amour.
+
+4. La bonté du Seigneur se répand
+Sur qui accomplit sa volonté,
+Attentif à sa Parole.
+
+5. Vous les anges, les saints du Seigneur,
+Tous ses serviteurs, toutes ses œuvres,
+Dans la joie bénissez-le.</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="benissez">
+<h2>Bénissez Dieu</h2>
+<div class="lyrics">
+<span class="refrain">
+Bénissez Dieu,
+Vous serviteurs de Dieu,
+Vous tous qui demeurez
+Dans la maison de Dieu.
+Levez les mains
+Vers le Dieu trois fois saint,
+Proclamez qu’il est grand
+Que son nom est puissant.
+</span>
+1. Oui, je le sais notre Seigneur est grand,
+Tout ce qu’il veut, sa main peut l’accomplir,
+Du fond des mers jusqu’au fond des abîmes,
+Depuis la terre jusqu’au plus haut du ciel !
+
+2. Reconnaissez que le Seigneur est bon !
+Il est fidèle en tout ce qu’il a fait.
+Je veux chanter la douceur de son nom,
+Béni soit Dieu par toutes les nations !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="celeste">
+<h2>Céleste Jérusalem</h2>
+<div class="lyrics">
+<span class="refrain">
+Notre cité se trouve dans les cieux,
+Nous verrons l’Epouse de l’Agneau,
+Resplendissante de la gloire de Dieu,
+Céleste Jérusalem!
+</span>
+1. L’Agneau deviendra notre flambeau,
+Nous nous passerons du soleil,
+Il n’y aura plus jamais de nuit,
+Dieu répandra sur nous sa lumière.
+
+2. Dieu aura sa demeure avec nous,
+Il essuiera les larmes de nos yeux,
+Il n’y aura plus de pleurs ni de peines
+Car l’ancien monde s’en est allé.
+
+3. Et maintenant, voici le salut,
+Le règne et la puissance de Dieu,
+Soyez donc dans la joie vous les Cieux,
+Il règnera sans fin dans les siècles.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="cest-par-ta-grace">
+<h2>C’est par ta grâce</h2>
+<div class="lyrics">
+<span class="refrain">
+C’est par ta grâce,
+Que je peux m’approcher de toi,
+C’est par ta grâce,
+Que je suis racheté.
+Tu fais de moi,
+Une nouvelle création,
+De la mort, tu m’as sauvé
+Par ta résurrection.
+</span>
+1. Tout mon être cherche,
+D’où viendra le secours,
+Mon secours est en Dieu,
+Qui a créé les cieux.
+De toute détresse,
+Il vient me libérer,
+Lui le Dieu fidèle
+De toute éternité.
+
+2. Tu connais mes craintes,
+Tu connais mes pensées.
+Avant que je naisse,
+Tu m’avais appelé.
+Toujours tu pardonnes,
+D’un amour infini.
+Ta miséricorde
+Est un chemin de vie.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="couronnee">
+<h2>Couronnée d’étoiles</h2>
+<div class="lyrics">
+<span class ="refrain">
+Nous te saluons,
+Ô toi, Notre Dame,
+Marie, Vierge Sainte, que drape le soleil.
+Couronnée d’étoiles, la lune est sous tes pas,
+En toi nous est donnée
+L’aurore du salut.
+</span>
+1. Marie Ève nouvelle et joie de ton Seigneur,
+Tu as donné naissance à Jésus le Sauveur.
+Par toi nous sont ouvertes les portes du jardin.
+Guide-nous en chemin, Étoile du Matin.
+
+2. Tu es restée fidèle, mère au pied de la croix.
+Soutiens notre espérance et garde notre foi.
+Du côté de ton Fils, tu as puisé pour nous,
+L’eau et le sang versés qui sauvent du péché.
+
+3. Quelle fut la joie d’Ève lorsque tu es montée,
+Plus haut que tous les anges, plus haut que les nuées.
+Et quelle est notre joie, douce Vierge Marie
+De contempler en Toi la promesse de vie.
+
+4. Ô Vierge immaculée, préservée du péché,
+En ton âme, en ton corps, tu entres dans les cieux.
+Emportée dans la gloire, sainte Reine des cieux,
+Tu nous accueilleras un jour auprès de Dieu.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="donne-moi">
+<h2>Donne-moi seulement de t’aimer</h2>
+<div class="lyrics">
+1- Prends, Seigneur, et reçois toute ma liberté,
+Ma mémoire, mon intelligence, toute ma volonté.
+<span class="refrain">
+Et donne-moi, donne-moi, donne-moi seulement de t’aimer.
+Donne-moi, donne-moi, donne-moi seulement de t’aimer.</span>
+2- Reçois tout ce que j’ai, tout ce que je possède
+C’est toi qui m’as tout donné, à toi, Seigneur je le rends.
+
+3- Tout est à toi, disposes-en, selon ton entière volonté,
+Et donne-moi ta grâce, elle seule me suffit.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="ecoute">
+<h2>Écoute, ton Dieu t’appelle</h2>
+<div class="lyrics">
+<span class="refrain">
+Écoute, ton Dieu t’appelle : « Viens, suis moi » ! 
+Lève-toi et ne crains pas de marcher avec  Lui. 
+Il est ton chemin de Vie, la Route de ta joie ! (bis) 
+</span>
+1- Accueille le Christ, il est ton Sauveur, 
+La Vie que le Père donne en abondance,
+Lui la vraie lumière, la vérité qui rend libre.
+Sa Parole vient réveiller ton cœur. 
+
+2- Quitte le cortège de l’indifférence,
+laisse les sentiers de ton désespoir, 
+Détourne les yeux des mirages qui séduisent ; 
+Tu as soif d’un amour vrai et pur. 
+
+3-Cherche son visage, écoute sa voix !
+Dans l’humble prière, découvre sa joie, 
+Cherche sa Présence au milieu de son Église !
+De Lui seul jaillit ta plénitude. 
+
+4- En toutes tes œuvres d’amour et de vie,
+Porte témoignage au feu de l’Esprit,
+Proclame à tes frères l’Évangile de la Paix !
+Ne crains pas, il fait route avec toi. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="en-toi">
+<h2>En toi, j’ai mis ma confiance</h2>
+<div class="lyrics">
+En toi, j’ai mis ma confiance,
+En toi, j’ai mis ma confiance,
+Ô Dieu très Saint,
+Toi seul es mon espérance
+Et mon soutien ;
+C’est pourquoi je ne crains rien,
+J’ai foi en toi, ô Dieu très Saint.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="en-toi-j">
+<h2>En toi, ma confiance</h2>
+<div class="lyrics">
+ <span class="refrain">
+En toi, j’ai mis Seigneur,
+Ma confiance
+Ne me délaisse pas,
+Dieu de ma joie !
+</span>
+1. Seigneur, m’oublieras-tu pour toujours ?
+Jusqu’à quand me cacheras-tu ta face ?
+Vois, mon âme est envahie de révolte,
+Et jour et nuit, le chagrin emplit mon cœur.
+
+2. Mon Dieu, pose ton regard sur moi,
+Réponds-moi, illumine mon visage.
+Dans la mort, que je ne m’endorme pas
+Et que le mal ne l’emporte pas sur moi.
+
+3. Pour moi, j’ai confiance en ton amour,
+Et j’exulte, ô Seigneur, car tu me sauves.
+Je te loue pour le bien que tu m’as fait,
+Et pour ton Nom, je chanterai à jamais !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="esprit">
+<h2>Esprit de Dieu</h2>
+<div class="lyrics">
+<span class="refrain">
+Viens, Esprit saint, 
+Viens, Esprit saint, 
+Viens, Esprit saint,
+Viens, Esprit saint.
+</span>
+1. Esprit de Dieu, viens comme un souffle, une flamme ;
+Esprit de Dieu, viens déployer ta force en nous.
+
+2. Esprit de Dieu, viens, ouvre nos yeux, nos oreilles ;
+Esprit de Dieu, viens, parle-nous dans ta douceur.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="esprit-lumiere">
+<h2>Esprit de lumière, Esprit Créateur</h2>
+<div class="lyrics">
+<span class="refrain">
+Esprit de lumière, Esprit Créateur,
+Restaure en nous la joie, le feu, l’Espérance.
+Affermis nos âmes, ranime nos cœurs,
+Pour témoigner de ton amour immense.
+</span>
+1. Viens Esprit du Dieu vivant,
+Renouvelle tes enfants,
+Viens, Esprit Saint, nous brûler de ton feu !
+Dans nos coeurs, répands tes dons,
+Sur nos lèvres inspire un chant,
+Viens, Esprit Saint, viens transformer nos vies !
+
+2. Fortifie nos corps blessés,
+Lave-nous de tout péché,
+Viens, Esprit Saint, nous brûler de ton feu !
+Fais nous rechercher la paix,
+Désirer la sainteté,
+Viens, Esprit Saint, viens transformer nos vies !
+
+<i> Veni Sancte Spiritus
+Veni Sancte Spiritus (bis)</i>
+
+3. Donne-nous la charité
+Pour aimer en vérité,
+Viens, Esprit Saint, nous brûler de ton feu !
+Nous accueillons ta clarté
+Pour grandir en liberté,
+Viens, Esprit Saint, viens transformer nos vies !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="esprit-pentecote">
+<h2>Esprit de Pentecôte, Souffle de Dieu</h2>
+<div class="lyrics">
+<span class="refrain">
+Esprit de Pentecôte, Souffle de Dieu, 
+Vois ton Église aujourd'hui rassemblée, 
+Esprit de Pentecôte, Souffle d'Amour 
+Emporte-nous dans ton élan 
+Emporte-nous dans ton élan. 
+</span>
+1 - Peuple de Dieu nourri de sa Parole
+Peuple de Dieu vivant de l'Évangile
+Peuple de Dieu se partageant le pain
+Peuple de Dieu devenu Corps du Christ. 
+
+2 - Peuple de Dieu aux écoutes du monde
+Peuple de Dieu partageant ses combats
+Peuple de Dieu solidaire des hommes
+Peuple de Dieu assoiffé de justice. 
+
+3 - Peuple de Dieu engagé dans l'histoire
+Peuple de Dieu témoin de son Royaume
+Peuple de Dieu portant l'espoir des hommes
+Peuple de Dieu bâtissant l'avenir. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="esprit-saint-viens">
+<h2>Esprit saint, ô viens</h2>
+<div class="lyrics">
+<span class="refrain">
+Viens, Esprit saint, 
+Répands sur notre Terre
+Le feu de ton amour 
+Et brûle en nous toujours.  
+</span>
+1. Viens manifester 
+Ton amour et ta bonté
+À tous tes enfants 
+Qui te cherchent en vérité.
+Viens nous libérer 
+De la mort et du péché.
+Viens nous consoler, 
+Esprit saint, ô viens !
+
+2. Viens renouveler
+Dans la foi, la charité,
+Tous les serviteurs 
+De ton Église assemblée.
+Viens nous réchauffer, 
+Que nous puissions proclamer :
+Jésus est Seigneur ! 
+Esprit saint, ô viens !
+
+3. Viens, répands tes dons, 
+Que nous vivions pour ton nom.
+Viens nous transformer, 
+Toi l’esprit de vérité.
+Donne-nous ta joie, 
+Viens, esprit de sainteté,
+Viens nous embraser, 
+Esprit saint, ô viens !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="faire-eglise">
+<h2>Faire Église tous ensemble</h2>
+<div class="lyrics">
+<span class="refrain">
+Faire Église tous ensemble 
+Dans l'Esprit qui nous unit : 
+Une Église pour le monde, 
+Corps vivant de Jésus Christ !   
+</span>
+1-Fils de Dieu qui nous devances, 
+Ta Parole nous conduit. 
+C'est la vie en abondance 
+Que tu veux pour tes brebis. 
+Par notre nom, tu nous connais, 
+Tu sais de quoi nous sommes faits. 
+
+2-Toi le Maître de la vigne, 
+Tu nous prends comme ouvriers. 
+À toute heure tu fais signe 
+Dans l'Église à vendanger. 
+En choisissant de te servir 
+Nous porterons beaucoup de fruit. 
+
+3- Au festin qui nous rassemble 
+Tu nous offres un même pain. 
+Notre cœur est à la danse, 
+Tu partages aussi le vin. 
+Dans le repas d'eucharistie 
+Nous te chantons notre merci. 
+
+4 -Baptisé dans ta famille 
+Nul de nous n'est orphelin. 
+Le bonheur qui nous habite 
+Prend sa source au feu divin. 
+Avec nos « oui » nous avançons 
+Sur des chemins de communion 
+
+5- Ton appel à vivre ensemble, 
+Qui dira jusqu'où il va ? 
+C'est un temps de renaissance 
+Traversé par des combats. 
+Les humbles pas de notre amour 
+Nous mèneront jusqu'à ton Jour. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="goutez">
+<h2>Goûtez et voyez</h2>
+<div class="lyrics">
+<span class="refrain">
+Goûtez et voyez comme est bon notre Seigneur, 
+Recevez Jésus, livré pour le Salut. 
+Devenez le temple saint du Christ Ressuscité, 
+Devenez le temple saint, 
+Demeure du Sauveur. 
+</span>
+1. Par ton corps livré, tu prends sur toi la faute, 
+Par ton sang versé, tu laves nos péchés, 
+Par ton cœur blessé, d’où jaillit le Salut, 
+Tu nous as rachetés.
+
+2. Jésus, pain du ciel, tu descends dans le monde,
+Dieu parmi les siens, mystère de l’amour,
+Tu te rends présent, livré entre nos mains,
+Près de nous pour toujours.
+
+3. Seigneur, tu nous offres, en ce banquet de Noces,
+Le vin de l’alliance et le pain de la Vie,
+Nous vivons en toi, comme tu vis en nous,
+Un seul corps dans l’Esprit.
+
+4. En te recevant, nous devenons l’Église,
+Peuple racheté, prémices du Salut.
+Par ta charité, tu rassembles en un corps
+Les enfants dispersés.
+
+5. Qu’il est grand, Seigneur, l’amour dont tu nous aimes,
+Tu te livres à nous en cette Eucharistie,
+Sommet de l’amour, don de la Trinité,
+Tu te fais pain de Vie.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="humblement">
+<h2>Humblement dans le silence</h2>
+<div class="lyrics">
+<span class="refrain">
+Humblement dans le silence de mon cœur,
+Je me donne à toi, mon Seigneur.
+</span>
+1. Par ton amour, fais-moi demeurer
+Humble et petit devant toi.
+
+2. Enseigne moi ta sagesse, ô Dieu,
+Viens habiter mon silence
+
+3. Entre tes mains, je remets ma vie,
+Ma volonté, tout mon être.
+
+4. Je porte en moi ce besoin d'amour,
+De donner, de me livrer sans retour.
+
+5. Vierge Marie, garde mon chemin
+Dans l'abandon, la confiance de l'amour.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="ils-deviennent-chemin">
+<h2>Ils deviennent chemin</h2>
+<div class="lyrics">
+<span class="refrain">
+Pour un seul et même dieu 
+Ils deviennent chemin 
+Et portent la lumière 
+Pour un seul et même dieu 
+Ils deviennent chemin 
+Et partagent le pain. 
+</span>
+1. Ton peuple a pris naissance quand une étoile s’est levée ; 
+Naissance de Dieu au cœur de l’homme, naissance de l’homme au cœur de Dieu, 
+Ton peuple a pris naissance. 
+
+2. Ton peuple a pris la route, au désert, ils t’ont tant cherché ; 
+La route de Dieu au cœur de l’homme, La route de l’homme au cœur de Dieu, 
+Ton peuple a pris la route. 
+
+3. Ton peuple a pris souffrance, sur une croix comme un paria ; 
+Souffrance de Dieu au cœur de l’homme, Souffrance de l’homme au cœur de Dieu, 
+Ton peuple a pris souffrance. 
+
+4. Ton peuple a pris lumière, Sa nuit ne sera plus sans fin ; 
+Lumière de Dieu au cœur de l’homme, Lumière de l’homme au cœur de Dieu, 
+Ton peuple a pris lumière. 
+
+5. Ton peuple a pris son souffle, comme folie de trop d’amour ; 
+Le souffle de Dieu au cœur de l’homme, le souffle de l’homme au cœur de Dieu, 
+Ton peuple a pris son souffle. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="je-veux">
+<h2>Je veux chanter ton amour, Seigneur</h2>
+<div class="lyrics">
+<span class ="refrain">
+Je veux chanter ton amour, Seigneur, 
+Chaque instant de ma vie.  
+Danser pour toi en chantant ma joie 
+Et glorifier ton Nom.  
+</span>
+1 - Ton amour pour nous  
+Est plus fort que tout 
+Et tu veux nous donner la vie, 
+Nous embraser par ton Esprit.  
+<b>Gloire à toi ! </b>
+
+2 - Oui, tu es mon Dieu, 
+Tu es mon Seigneur. 
+Toi seul es mon libérateur, 
+Le rocher sur qui je m’appuie. 
+<b>Gloire à toi ! </b>
+3 - Car tu es fidèle, 
+Tu es toujours là, 
+Tout près de tous ceux qui te cherchent, 
+Tu réponds à ceux qui t’appellent. 
+<b>Gloire à toi ! </b>
+4 - Voici que tu viens 
+Au milieu de nous, 
+Demeurer au cœur de nos vies 
+Pour nous mener droit vers le Père. 
+<b>Gloire à toi ! </b>
+5 - Avec toi, Seigneur, 
+Je n’ai peur de rien. 
+Tu es là sur tous mes chemins. 
+Tu m’apprends à vivre l’amour. 
+<b>Gloire à toi ! </b></div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="je-vous-aime">
+<h2>Je vous aime, ô mon Dieu</h2>
+<div class="lyrics">
+<span class ="refrain">
+Je vous aime, ô mon Dieu
+Et mon seul désir est de vous aimer,
+De vous aimer jusqu’au dernier soupir de ma vie,
+Jusqu’au dernier soupir de ma vie.
+</span>
+ 
+1. Ô Dieu Saint, Tu as fait de mon cœur
+Le Ciel de ta demeure, un temple sacré !
+Père, Fils et Saint-Esprit,
+Ton amour est pour moi le plus grand des trésors ! 
+
+2.  Nous portons le nom de « fils de Dieu »
+Car nous avons un Père qui veille sur nous
+Montrons-nous dignes de Lui,
+Il a livré son Fils, offrons-Lui notre amour ! 
+
+3.  Jésus Christ, notre Dieu et Seigneur,
+Tu nous conduis au Père, Tu es le Chemin !
+Ton sang versé sur la Croix
+Nous a rendu la vie, nous a ouvert le Ciel ! 
+
+4.  Esprit Saint, Eau Vive de l’amour
+Répandue sur la terre en fine rosée,
+Tu viens arroser le grain
+Pour que lève l’épi sous le Soleil de Dieu. 
+
+5. Ô mon Dieu, ton amour est si bon,
+Lui qui remplit notre âme, notre seule joie !
+Quel bonheur que de t’aimer,
+Nous sommes si petits, et Tu nous vois si grands ! 
+
+6.  Ton amour est de tous les instants,
+Dans ta Miséricorde, tout nous est donné,
+Tu veilles sur nous sans fin,
+Lorsque nous chancelons, Tu es notre soutien. 
+
+7. Ton regard suffit à notre cœur
+Pour le combler de grâce, pour le libérer,
+Par elle, l’homme est si grand !
+Ta grâce, ô notre Dieu, convertit tout en or. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="jesus-chemin">
+<h2>Jésus est le chemin</h2>
+<div class="lyrics">
+<span class="refrain">
+Jésus est le chemin est le chemin, qui nous mène droit vers le Père,  
+C’est lui qui est la vérité, Il est la vie.  
+</span>
+1. Jamais homme n’a parlé ainsi que celui-là,
+Non personne ne peut faire les signes qu’il accomplit, 
+Dieu est avec lui !  
+
+2. Jean-Baptiste nous a dit : “Voici l’Agneau de  Dieu”,  
+Car c’est lui que le Père a marqué de son sceau. 
+Venez et voyez.  
+
+3. Celui qui croit en moi a la vie éternelle,
+Qui me suit marchera, non pas dans les ténèbres,
+Mais dans la lumière.  
+
+4. En gardant ma parole, vous serez mes disciples, 
+Alors vous connaîtrez vraiment la vérité 
+Qui vous rendra libres.  
+
+5. Qui ne prend pas sa croix, ne peut suivre mes pas.  
+Mais qui perdra sa vie pour moi la sauvera.
+Marchez à ma suite !  
+
+6. Mon Royaume n’est pas de ce monde ici-bas. 
+Je suis roi et quiconque est de la vérité,  
+Écoute ma voix.  
+
+7. À nouveau je viendrai, vous prendrai avec moi,
+Et du lieu où je vais vous savez le chemin.
+Ayez foi en moi.  
+
+8. De son sein couleront, oui des fleuves d’eaux vives.  
+Recevez l’Esprit Saint pour être dans le monde,
+Témoins de l’Amour !  
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="la-maison">
+<h2>La maison du Père</h2>
+<div class="lyrics">
+<span class="refrain">
+Toute adoration, tout honneur et gloire
+A l’agneau de dieu, il est vainqueur!
+Toutes les nations chanteront la force et
+La miséricorde du seigneur
+</span>
+1. Venez, chantons le seigneur dans la joie
+Revenons à la maison du père, il nous ouvre ses bras
+Venez au banquet de son grand amour
+Jubilez, car celui qui était mort revient à la vie!
+
+2. Voyez le peuple aimé du seigneur
+Revêtu de sa miséricorde et de sa compassion
+Il est sauvé, racheté par la croix
+Envoyé pour chanter dans le monde la joie de la foi
+
+3. Éternelle, éternelle
+La miséricorde du Seigneur
+Éternelle, éternelle
+La miséricorde du Seigneur
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="la-premiere">
+<h2>La première en chemin</h2>
+<div class="lyrics">
+<span class="refrain">
+Marche avec nous, Marie, sur nos chemins de foi,
+Ils sont chemins vers Dieu, ils sont chemins vers Dieu.
+</span>
+1. La première en chemin, Marie tu nous entraînes, 
+à risquer notre oui, aux imprévus de Dieu.
+Et voici qu'est semé en l'argile incertaine de notre humanité,
+Jésus Christ Fils de Dieu.
+
+2. La première en chemin, joyeuse tu t'élances, 
+Prophète de Celui, qui a pris corps en toi.
+La parole a surgi, tu es sa résonance 
+et tu franchis des monts pour en porter la voix.
+
+3. La première en chemin, tu provoques le signe 
+et l’heure pour Jésus de se manifester.
+« Tout ce qu’il vous dira, faites-le » et nos vignes, 
+sans saveur et sans fruit, en sont renouvelées.
+
+4. La première en chemin, pour suivre au Golgotha 
+le fils de ton amour, que tous ont condamné.
+Tu te tiens là debout, au plus près de la croix, 
+pour recueillir la vie de son cœur transpercé.
+
+5. La première en chemin brille ton espérance, 
+dans ton cœur déchiré et la nuit du tombeau.
+Heureuse Toi qui crois d’une absolue confiance, 
+sans voir sans toucher, tu sais le jour nouveau.
+
+6. La première en chemin, avec l'Eglise en marche, 
+dès les commencements, tu appelles l'Esprit.
+En ce monde aujourd'hui, assure notre marche 
+que grandisse le corps de son fils Jésus Christ.
+
+7. La première en chemin, aux rives bienheureuses, 
+tu précèdes, Marie, toute l'humanité.
+Du Royaume accompli, tu es pierre précieuse, 
+revêtue du soleil, tu es transfigurée !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="le-seigneur">
+<h2>Le Seigneur est ma lumière et mon salut</h2>
+<div class="lyrics">
+<span class="refrain">
+Le Seigneur est ma lumière et mon salut ;
+De qui aurais-je crainte ?
+Le Seigneur est le rempart de ma vie ;
+Devant qui tremblerais-je ?
+</span>
+1. J’ai demandé une chose au Seigneur,
+La seule que je cherche :
+Habiter la maison du Seigneur 
+Tous les jours de ma vie.
+
+2. Habiter la maison du Seigneur, 
+Pour t’admirer en ta bonté
+Et m’attacher à ton Eglise Seigneur, 
+M’attacher à ton Eglise, Seigneur.
+
+3. J’en suis sûr, je verrai les bontés du Seigneur 
+Sur la terre des vivants.
+« Espère, sois fort et prends courage ; Espère, espère le Seigneur. »
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="marie">
+<h2>Marie, douce lumière</h2>
+<div class="lyrics">
+<span class ="refrain">
+Marie, douce lumière,
+Porte du ciel, temple de l'Esprit,
+Guide-nous vers Jésus et vers le Père,
+Mère des pauvres et des tout petits.
+</span>
+1. Bénie sois tu, Marie
+Ton visage rayonne de l'Esprit
+Sa lumière repose sur toi
+Tu restes ferme dans la foi.
+
+2. Bénie sois-tu, Marie, En ton sein,
+Tu portes Jésus Christ
+Le créateur de tout l'univers
+Le Dieu du ciel et de la terre.
+
+3. Bénie sois-tu, Marie
+La grâce de Dieu t'a envahie
+En toi le Christ est déjà sauveur
+De tout péché il est vainqueur.
+
+4. Bénie sois-tu, Marie
+Dans tes mains qui sans cesse supplient
+Tu portes la douleur du péché
+Le corps de Jésus déchiré.
+
+5. Bénie sois-tu, Marie
+Toi l'icône de l’Église qui prie
+Pour l'éternité avec tous les saints
+Les anges te chantent sans fin
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="o-jesus">
+<h2>Ô Jésus Miséricordieux</h2>
+<div class="lyrics">
+<span class="refrain">
+O Jésus miséricordieux, je t’adore,
+J’ai confiance en toi, j’ai confiance en toi.
+</span>
+1. Des torrents d’eaux vives jaillissent de ton cœur,
+Des sources vives et pures de ta miséricorde,
+Désaltère mon âme et renouvelle ma vie.
+Sans fin Seigneur, je veux vivre pour toi.
+
+2. Ta miséricorde dans le Saint Sacrement,
+C’est ce que ton amour a daigné m’accorder,
+Mon âme espère en toi et elle s’abandonne à toi.
+Tu es fidèle et tu ne déçois pas.
+
+3. Feu brûlant au cœur de ton amour divin,
+Tu consumes mon cœur et tu le purifies,
+Embrase-moi d’amour, conduis-moi par ton Esprit,
+Consacre-moi à ta miséricorde.
+
+4. Je te livre ma vie, accepte-la.
+Comme une hostie vivante, daigne la transformer,
+Pour la gloire de ton nom, je veux faire ta volonté.
+Ô mon Jésus, ma confiance est en toi.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="pour-tes">
+<h2>Pour tes merveilles</h2>
+<div class="lyrics">
+<span class="refrain">
+Pour tes merveilles, 
+Je veux chanter ton Nom, 
+Proclamer combien tu es bon ! 
+De toi et de toi seul, Seigneur, dépend mon sort, 
+Ô mon roi, mon Dieu je t’adore. 
+</span>
+1. Quand je t’appelle dans la détresse,
+Sensible à mon cri tu t’abaisses,
+Ta droite douce et forte me redresse,
+Contre ton sein me tient sans cesse.
+
+2. À ta tendresse je m’abandonne, 
+Car sûre est ta miséricorde. 
+Qui comme toi, Seigneur, sauve et pardonne ?
+Pas de salut que tu n’accordes ! 
+
+3. Je ne peux vivre qu’en ta présence, 
+Que ne me soit cachée ta face ! 
+Ne déçois pas, Seigneur, mon espérance :
+À tout jamais je rendrai grâce. 
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="que-ma-bouche">
+<h2>Que ma bouche chante ta louange</h2>
+<div class="lyrics">
+1. De toi, Seigneur, nous attendons la vie,
+Que ma bouche chante ta louange.
+Tu es pour nous un rempart, un appui,
+Que ma bouche chante ta louange.
+La joie du cœur vient de toi ô Seigneur,
+Que ma bouche chante ta louange.
+Notre confiance est dans ton nom très saint !
+Que ma bouche chante ta louange.
+  <span class="refrain">
+Sois loué Seigneur, pour ta grandeur,
+Sois loué pour tous tes bienfaits.
+Gloire à toi Seigneur, tu es vainqueur,
+Ton amour inonde nos cœurs.
+Que ma bouche chante ta louange.
+</span>
+2. Seigneur, tu as éclairé notre nuit,
+Que ma bouche chante ta louange.
+Tu es lumière et clarté sur nos pas,
+Que ma bouche chante ta louange.
+Tu affermis nos mains pour le combat,
+Que ma bouche chante ta louange.
+Seigneur tu nous fortifies dans la foi !
+Que ma bouche chante ta louange.
+
+3. Tu viens sauver tes enfants égarés,
+Que ma bouche chante ta louange.
+Qui dans leur cœur espèrent en ton amour,
+Que ma bouche chante ta louange.
+Dans leur angoisse, ils ont crié vers toi,
+Que ma bouche chante ta louange.
+Seigneur tu entends le son de leur voix !
+Que ma bouche chante ta louange.
+
+4. Des ennemis, toi tu m’as délivré,
+Que ma bouche chante ta louange.
+De l’agresseur, tu m’as fait triompher,
+Que ma bouche chante ta louange.
+Je te rends grâce au milieu des nations,
+Que ma bouche chante ta louange.
+Seigneur, en tout temps, je fête ton Nom !
+Que ma bouche chante ta louange.</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="quils-sont-beaux">
+<h2>Qu’ils sont beaux</h2>
+<div class="lyrics">
+1. Qu'ils sont beaux sur toutes les montagnes
+Les pieds de celui qui porte la nouvelle
+Qui annonce la paix, la joie, la délivrance
+Et qui te dit que ton Dieu règne
+Qu'ils sont beaux sur toutes les montagnes
+Les pieds de celui qui porte la nouvelle
+Qui annonce la paix, la joie, la délivrance
+Et qui te dit que ton Dieu règne
+<span class="refrain">
+Éclatez tous en criant de joie
+Car le Seigneur a racheté son peuple
+Il nous a libéré du joug de l'esclavage
+Et nous a donné son esprit
+Éclatez tous en criant de joie
+Car le Seigneur a racheté son peuple
+Il nous a libéré du joug de l'esclavage
+Et nous a donné son esprit
+</span>
+2. Réveille-toi, ô Jérusalem
+Revêt ta parure et tes habits de fête
+Et secoue ta poussière, avance vers ton Dieu
+Car il a consolé son peuple
+Réveille-toi, ô Jérusalem
+Revêt ta parure et tes habits de fête
+Et secoue ta poussière, avance vers ton Dieu
+Car il a consolé son peuple
+
+3. Oh écoutez l'arbre des guetteurs
+Ils élèvent la voix
+Et ils crient d'allégresse
+Car de leurs propres yeux
+Ils ont vu le Seigneur
+Revenir en gloire à Sion
+Oh écoutez l'arbre des guetteurs
+Ils élèvent la voix
+Et ils crient d'allégresse
+Car de leurs propres yeux
+Ils ont vu le Seigneur
+Revenir en gloire à Sion
+
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="recevez">
+<h2>Recevez le Christ</h2>
+<div class="lyrics">
+1. Voici le Fils aimé du Père,
+Don de Dieu pour sauver le monde.
+Devant nous il est là, il se fait proche,
+Jésus, l’Agneau de Dieu !
+<span class="refrain">
+Recevez le Christ doux et humble,
+Dieu caché en cette hostie.
+Bienheureux disciples du Seigneur,
+Reposez sur son cœur, apprenez tout de lui.
+</span>
+2. Jésus, jusqu’au bout tu nous aimes,
+Tu prends la condition d’esclave.
+Roi des rois, tu t’abaisses jusqu’à terre
+Pour nous laver les pieds.
+
+3. Seigneur, comme est grand ce mystère,
+Maître comment te laisser faire ?
+En mon corps, en mon âme pécheresse,
+Tu viens pour demeurer.
+
+4. Je crois, mon Dieu, en toi j’espère.
+Lave mes pieds et tout mon être :
+De ton cœur, fais jaillir en moi la source,
+L’eau vive de l’Esprit.
+
+5. Seigneur, tu m’appelles à te suivre.
+Viens au secours de ma faiblesse.
+En mon cœur, viens, établis ta demeure,
+Que brûle ton Amour.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="regarde">
+<h2>Regarde l’étoile</h2>
+<div class="lyrics">
+1. Si le vent des tentations s’élève,
+Si tu heurtes le rocher des épreuves.
+Si les flots de l’ambition t’entraînent,
+Si l’orage des passions se déchaîne :
+<span class="refrain">
+Regarde l’étoile, invoque Marie,
+Si tu la suis, tu ne crains rien !
+Regarde l’étoile, invoque Marie,
+Elle te conduit sur le chemin !
+</span>
+2. Dans l’angoisse et les périls, le doute,
+Quand la nuit du désespoir te recouvre.
+Si devant la gravité de tes fautes
+La pensée du jugement te tourmente :
+
+3. Si ton âme est envahie de colère,
+Jalousie et trahison te submergent.
+Si ton cœur est englouti dans le gouffre,
+Emporté par les courants de tristesse :
+
+4. Elle se lève sur la mer, elle éclaire,
+Son éclat et ses rayons illuminent.
+Sa lumière resplendit sur la terre,
+Dans les cieux et jusqu’au fond des abîmes.
+
+<i>Si tu la suis, tu ne dévies pas,
+Si tu la pries tu ne faiblis pas
+Tu ne crains rien, elle est avec toi,
+Et jusqu’au port elle te guidera</i>
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="regardez-humilite">
+<h2>Regardez l’humilité de Dieu</h2>
+<div class="lyrics">
+<span class="refrain">
+Regardez l'humilité de Dieu,
+Regardez l'humilité de Dieu,
+Regardez l'humilité de Dieu,
+Et faites-lui hommage de vos cœurs.
+</span>
+1. Admirable grandeur,
+Étonnante bonté
+Du Maître de l'univers
+Qui s'humilie pour nous
+Au point de se cacher
+Dans une petite hostie de pain.
+
+2. Faites-vous tout petits,
+Vous aussi devant Dieu
+Pour être élevés par Lui,
+Ne gardez rien pour vous,
+Offrez-vous tout entiers
+À ce Dieu qui se donne à vous.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="repands-ton-feu">
+<h2>Répands ton feu sur la terre</h2>
+<div class="lyrics">
+<span class="refrain">
+Répands ton feu sur la terre Esprit de Dieu,
+Répands ton feu dans nos coeurs Esprit d'amour.
+Que brille ta flamme dans nos vies,
+Dans le monde, viens Saint-Esprit !
+</span>
+1. Esprit de Dieu, Esprit d'amour, <b>Viens Esprit Saint embrase-nous.</b>
+Vent créateur, doigt du Père, <b>Viens Esprit Saint embrase-nous.</b>
+
+2. Ombre féconde, Brise légère, <b>Viens Esprit Saint embrase-nous.</b>
+Sève du monde, don gratuit, <b>Viens Esprit Saint embrase-nous.</b>
+
+3. Source très pure, Torrent de vie, …
+Fleuve puissant de la grâce, …
+
+4. Clarté d'en haut, Langue de feu, …
+Flambeau de Gloire, feu vivant,…
+
+5. Vrai Défenseur, Consolateur, …
+Joie de l'Eglise, souffle pur …
+
+6. Onction royale, force et douceur, …
+Sainte lumière des prophètes, …
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="souffle">
+<h2>Souffle imprévisible</h2>
+<div class="lyrics">
+<span class="refrain">
+Esprit de vérité, brise du Seigneur 
+Esprit de liberté, passe dans nos cœurs 
+Esprit de vérité, brise du Seigneur 
+Esprit de liberté, passe dans nos cœurs. 
+</span>
+1. Souffle imprévisible, Esprit de Dieu, 
+Vent qui fait revivre, Esprit de Dieu, 
+Souffle de tempête, Esprit de Dieu, 
+Ouvre nos fenêtres, Esprit de Dieu. 
+
+2. Fleuve des eaux vives, Esprit de Dieu, 
+Chant de l'autre rive, Esprit de Dieu, 
+Fleuve au long voyage, Esprit de Dieu, 
+Porte-nous au large, Esprit de Dieu. 
+
+3. Source de sagesse, Esprit de Dieu, 
+puits de la tendresse, Esprit de Dieu, 
+source pour ton peuple, Esprit de Dieu, 
+coule en nos demeures, Esprit de Dieu. 
+
+4. Joie donnée aux hommes, Esprit de Dieu, 
+fête du royaume, Esprit de Dieu, 
+joie de l’Évangile, Esprit de Dieu, 
+fais de nous des signes, Esprit de Dieu
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="tu-as-porte">
+<h2>Tu as porté celui qui porte tout</h2>
+<div class="lyrics">
+<span class="refrain">
+Tu as porté celui qui porte tout,
+Notre Sauveur en ton sein a pris chair.
+Porte du ciel, Reine de l'univers,
+Ô Marie, nous te saluons !
+</span>
+1. Par amour ton Dieu t'a choisie, Vierge bénie.
+Ton Seigneur exulte pour toi, tu es sa joie !
+
+2. Tu accueilles, servante de Dieu, l'ange des cieux.
+La promesse en toi s'accomplit : tu as dit « oui » !
+
+3. L'Esprit Saint est venu sur toi, élue du Roi.
+Tu nous donnes l'Emmanuel, Ève nouvelle !
+
+4. Mère aimante, au pied de la croix, tu nous reçois.
+Par Jésus nous sommes confiés à ta bonté !
+
+5. Dans sa gloire, Dieu t'a accueillie auprès de lui.
+Tu deviens, joie de l'Éternel, Reine du ciel !
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="venez-voir">
+<h2>Venez voir</h2>
+<div class="lyrics">
+<span class="refrain">
+Venez voir, nous avons trouvé
+Celui que nous cherchons,
+La lumière de nos coeurs.
+Venez voir, nous avons trouvé
+Jésus, Maître et Seigneur.
+</span>
+1. Le bonheur de nos vies
+S’est fait “Dieu-avec-nous”.
+Il a pris nos chemins pour parler à nos coeurs,
+Il est venu combler les ravins de nos peurs.
+
+2. Le bonheur de nos vies est un “Enfant Messie”.
+Le Fils du Tout-puissant, à l’ombre de l’Esprit
+Caché aux yeux des grands, révélé aux petits.
+
+3. Le bonheur de nos vies est un trésor caché.
+Un amour si précieux que l’on a tant cherché,
+La tendresse de Dieu qui se laisse trouver.
+
+4. Le bonheur de nos vies est un levain enfoui
+Qui fait lever nos jours et nourrit notre faim.
+Dieu livre son amour et partage le pain.
+
+5. Le bonheur de nos vies est un Dieu crucifi é,
+Scandale des savants, refuge des pécheurs,
+Force pour les vivants, Jésus notre Sauveur.
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="viens-descends">
+<h2>Viens, Esprit Saint descends sur nous</h2>
+<div class="lyrics">
+Viens, Esprit Saint descends sur nous,
+Comble-nous de ton amour,
+Que rayonne ta bonté !
+
+Viens, Envoyé du Dieu Très-Haut,
+Viens et fortifie nos corps,
+Et fais de nous ta demeure.
+
+Viens et embrase nos vies,
+Viens briller dans nos nuits,
+Toi le consolateur.
+(A toi nos louanges)
+
+Viens Esprit de vérité,
+Viens purifier nos cœurs,
+Viens nous renouveler.
+(A toi nos louanges)
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="viens-embraser">
+<h2>Viens embraser nos cœurs</h2>
+<div class="lyrics">
+<span class="refrain">
+Viens Esprit-Saint, viens embraser nos cœurs,
+Viens au secours de nos faiblesses ;
+Viens Esprit-Saint, viens Esprit consolateur,
+Emplis-nous de joie et d’allégresse.
+</span>
+1- Viens en nos âmes lasses, Esprit de sainteté,
+Viens nous combler de grâce et viens nous sanctifier ;
+Viens guérir nos blessures, toi le consolateur,
+Viens source vive et pure, apaiser notre cœur.
+
+2- Envoyé par le Père, tu viens nous visiter,
+Tu fais de nous des frères, peuple de baptisés. 
+Enfants de la lumière, membres de Jésus-Christ
+Nous pouvons crier : « Père » d’un seul et même Esprit.
+
+3-En nos cœurs viens répandre les dons de ton amour
+Viens inspirer nos langues pour chanter Dieu toujours,
+Viens Esprit de sagesse, viens prier en nos cœurs,
+Viens et redis sans cesse : « Jésus-Christ est Seigneur !» .
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+<section class="song" id="viens-remplir">
+<h2>Viens remplir de ton feu</h2>
+<div class="lyrics">
+<span class="refrain">
+Viens Esprit Saint t’emparer de mon cœur,
+Viens remplir de ton feu mon âme, ô mon Dieu,
+Fais descendre du ciel un rayon de ta grâce
+Et que brille sur moi la lumière de ta gloire.
+</span>
+1. Viens Esprit Saint au profond de nos âmes
+Fais de nous la demeure du Père et du Fils.
+Ô puissance éternelle et sagesse de Dieu
+Viens guérir nos blessures et répandre ton amour.
+
+2. Viens combler nos cœurs de ta joie
+Toi le don du Père et du Fils.
+Garde-nous Seigneur à l’ombre de tes ailes.
+Esprit Saint, Paraclet, sanctifie ton Église.
+Ouvre-nous le chemin du Royaume des cieux
+</div>
+<a class="back" href="#sommaire">↑ Retour</a>
+</section>
+
+</div>
+
+<a href="#sommaire" class="floating-home">↑</a>
+
+<script>
+document.getElementById('search').addEventListener('input', function () {
+
+  const value = this.value.toLowerCase();
+
+  document.querySelectorAll('.song').forEach(song => {
+
+    song.style.display =
+      song.innerText.toLowerCase().includes(value)
+      ? 'block'
+      : 'none';
+
+  });
+
+});
+</script>
+
+</body>
+</html>
