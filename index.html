@@ -1481,9 +1481,15 @@ Ouvre-nous le chemin du Royaume des cieux
 <a href="#sommaire" class="floating-home">↑</a>
 
 <script>
-document.getElementById('search').addEventListener('input', function () {
+const search = document.getElementById('search');
+const toc = document.querySelector('.toc');
 
-  const value = this.value.toLowerCase();
+search.addEventListener('input', function () {
+
+  const value = this.value.toLowerCase().trim();
+
+  // Cache le sommaire pendant la recherche
+  toc.style.display = value ? 'none' : 'block';
 
   document.querySelectorAll('.song').forEach(song => {
 
